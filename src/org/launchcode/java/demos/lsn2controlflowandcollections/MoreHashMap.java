@@ -4,8 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class  HashMapGradebook {
-
+public class MoreHashMap {
     public static void main(String[] args) {
 
         HashMap<String, Double> students = new HashMap<>();
@@ -16,7 +15,6 @@ public class  HashMapGradebook {
 
         // Get student names and grades
         do {
-
             System.out.print("Student: ");
             newStudent = input.nextLine();
 
@@ -35,10 +33,13 @@ public class  HashMapGradebook {
         System.out.println("\nClass roster:");
         double sum = 0.0;
 
-        for (Map.Entry<String, Double> student : students.entrySet()) {
-            System.out.println(student.getKey() + " (" + student.getValue() + ")");
-            sum += student.getValue();
+        for (Map.Entry student : students.entrySet()) {
+            System.out.println(student.getKey() + " " + student.getValue());
+            //sum += student.getValue();
         }
+        //for (Map.Entry entry : characterCountMap.entrySet()) {
+        //System.out.println(entry.getKey() + " " + entry.getValue());
+        //System.out.println(strArray);
 
         double avg = sum / students.size();
         System.out.println("Average grade: " + avg);
